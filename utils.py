@@ -9,7 +9,7 @@ from langchain_community.chat_models.tongyi import ChatTongyi
 from langchain_community.embeddings import TensorflowHubEmbeddings
 
 def qa_agent(tongyi_api_ke, memory, uploaded_file, question):
-    model = ChatTongyi(model='qwen-max', api_key = "sk-c29e90529fb749f390f02be4693112a2")
+    model = ChatTongyi(model='qwen-long', api_key = "sk-c29e90529fb749f390f02be4693112a2")
     file_content = uploaded_file.read()
     temp_file_path = "temp.pdf"
     with open(temp_file_path, "wb") as temp_file:
